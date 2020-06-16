@@ -20,7 +20,7 @@ public class Employee extends AbsStaffMember {
 	public String toString() {
 		return "\nEmployee \n name : " +name+
 				"\n address : " +address+
-				"ºn phone : " +phone+
+				"\n phone : " +phone+
 				"\n salary per month: " +salaryPerMonth+
 				"\n salary rate: " + salaryRate+ ".";
 				

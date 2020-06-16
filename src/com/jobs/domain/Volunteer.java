@@ -26,7 +26,7 @@ public class Volunteer extends AbsStaffMember {
 	
 	@Override
 	public void pay() {
-		//TODO
+		//not geting paid
 		
 	}
 

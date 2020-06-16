@@ -24,7 +24,7 @@ public abstract class AbsStaffMember {
 				
 	}
 
-	public AbsStaffMember(String name, String address, String phone, salaryPerMonth, PaymentFactory.createPaymentRateBoss()) throws Exception {
+	public AbsStaffMember(String name, String address, String phone) throws Exception {
 		if (name.equals(""))
 			throw new Exception();
 		if (address.equals(""))

@@ -13,7 +13,7 @@ public class Main {
 		controller.createBossEmployee("Pepe Boss", "Direccion molona", "666666666", 100.0);
 		controller.createEmployee("Pedro Employee", "Direccion molona 2", "665266666", 40.0);
 		controller.createEmployee("Laura Employee", "Direccion molona 3", "625266666", 45.0);
-		controller.createVolunteer("Juan Volunteer", "Direccion molona 4", "614266666");
+		controller.createVolunteer("Juan Volunteer", "Direccion molona 4", "614266666", "description");
 		controller.createManagerEmployee("Pedro Employee", "Direccion molona 2", "665226666", 80.0);
 		
 		
