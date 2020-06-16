@@ -1,12 +1,12 @@
 package com.jobs.domain;
 
-public class Employee extends AbsStaffMember {
+public class Boss extends AbsStaffMember {
 
 	protected double salaryPerMonth;
 	protected IPaymentRate paymentRate;
 	private double salaryRate;	
 
-	public Employee(String name, String address, String phone, double salaryPerMonth,IPaymentRate paymentRate) throws Exception {
+	public Boss(String name, String address, String phone, double salaryPerMonth,IPaymentRate paymentRate) throws Exception {
 		super(name, address, phone);		
 		if(salaryPerMonth<0) throw new Exception();
 		if(paymentRate==null) throw new Exception();
