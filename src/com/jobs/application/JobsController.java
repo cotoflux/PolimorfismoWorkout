@@ -1,6 +1,7 @@
 package com.jobs.application;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.jobs.domain.AbsStaffMember;
@@ -15,28 +16,29 @@ public class JobsController {
 	private EmployeeRepository repository;
 	
 	public JobsController(){
-		
+		//Inicializo  el repositorio.
+		this.repository= new EmployeeRepository();
 	}
 	
 	public void createBossEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
 		//el objeto tiene que ser de tipo ABSStaffMember
-		AbsStaffMember boss = new Boss(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateBoss());
-		System.out.println(boss);
-		//repository.addMember(boss);
+		AbsStaffMember boss = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateBoss());
+		//System.out.println(boss);
+		repository.addMember(boss);
 	}
 	
 	public void createEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
 		//el objeto tiene que ser de tipo ABSStaffMember
 		AbsStaffMember employee = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
-		System.out.println(employee);
-		//repository.addMember(employee);
+		//System.out.println(employee);
+		repository.addMember(employee);
 	}
 
 	public void createManagerEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{
 		//el objeto tiene que ser de tipo ABSStaffMember
 		AbsStaffMember manager = new Manager(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateManager());
-		System.out.println(manager);
-		//repository.addMember(manager);
+		//System.out.println(manager);
+		repository.addMember(manager);
 	}
 	
 
@@ -60,8 +62,8 @@ public class JobsController {
 	public void createVolunteer(String name, String adress, String phone, String description) throws Exception{
 		// Modifico parametros los voluntarios deben tener su nombre y demas params
 		AbsStaffMember volunteer = new Volunteer(name, adress, phone, description);
-		System.out.println(volunteer);
-		//repository.addMember(volunteer);
+		//System.out.println(volunteer);
+		repository.addMember(volunteer);
 	}
 	
 	

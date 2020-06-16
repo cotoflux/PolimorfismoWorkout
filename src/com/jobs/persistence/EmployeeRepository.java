@@ -10,7 +10,8 @@ public class EmployeeRepository {
 	private static List<AbsStaffMember> members=new ArrayList<>();
 	
 	public EmployeeRepository(){
-		
+		//Instancia de la lista de los miembros en el constructor
+		this.members = new ArrayList<>();
 	}
 	
 	public List<AbsStaffMember> getAllMembers(){
