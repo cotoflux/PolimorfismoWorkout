@@ -34,7 +34,7 @@ public class JobsController {
 
 	public void createManagerEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{
 		//el objeto tiene que ser de tipo ABSStaffMember
-		AbsStaffMember manager = new Manager(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
+		AbsStaffMember manager = new Manager(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateManager());
 		System.out.println(manager);
 		//repository.addMember(manager);
 	}
